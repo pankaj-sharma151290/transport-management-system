@@ -1,0 +1,208 @@
+2021-08-23 00:09:03.104  INFO 25608 --- [main] e.t.TransportManagementSystemApplication : Starting TransportManagementSystemApplication on CI-11497 with PID 25608 (C:\Assignment\TransportManagementSystem\target\classes started by x000249 in C:\Assignment\TransportManagementSystem)
+2021-08-23 00:09:03.113  INFO 25608 --- [main] e.t.TransportManagementSystemApplication : No active profile set, falling back to default profiles: default
+2021-08-23 00:09:04.087  INFO 25608 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-08-23 00:09:04.153  INFO 25608 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57ms. Found 3 JPA repository interfaces.
+2021-08-23 00:09:05.200  INFO 25608 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2021-08-23 00:09:05.208  INFO 25608 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-23 00:09:05.208  INFO 25608 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2021-08-23 00:09:05.330  INFO 25608 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-23 00:09:05.331  INFO 25608 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2162 ms
+2021-08-23 00:09:05.541  INFO 25608 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-08-23 00:09:05.716  INFO 25608 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-08-23 00:09:05.724  INFO 25608 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2021-08-23 00:09:05.996  INFO 25608 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-08-23 00:09:06.067  INFO 25608 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2021-08-23 00:09:06.208  INFO 25608 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-08-23 00:09:06.345  INFO 25608 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-08-23 00:09:07.063  INFO 25608 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-08-23 00:09:07.069  INFO 25608 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-08-23 00:09:07.771  WARN 25608 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-23 00:09:07.900  INFO 25608 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-08-23 00:09:08.014  INFO 25608 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-08-23 00:09:08.139  INFO 25608 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-23 00:09:08.355  INFO 25608 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-08-23 00:09:08.377  INFO 25608 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-08-23 00:09:08.399  INFO 25608 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-08-23 00:09:08.599  INFO 25608 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2021-08-23 00:09:08.601  INFO 25608 --- [main] e.t.TransportManagementSystemApplication : Started TransportManagementSystemApplication in 5.823 seconds (JVM running for 6.218)
+2021-08-23 00:09:13.614  INFO 25608 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-23 00:09:13.614  INFO 25608 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-08-23 00:09:13.628  INFO 25608 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
+2021-08-23 00:15:05.588  INFO 5948 --- [main] ransportManagementSystemApplicationTests : Starting TransportManagementSystemApplicationTests on CI-11497 with PID 5948 (started by x000249 in C:\Assignment\TransportManagementSystem)
+2021-08-23 00:15:05.589  INFO 5948 --- [main] ransportManagementSystemApplicationTests : No active profile set, falling back to default profiles: default
+2021-08-23 00:15:06.711  INFO 5948 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-08-23 00:15:06.799  INFO 5948 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 78ms. Found 3 JPA repository interfaces.
+2021-08-23 00:15:08.161  INFO 5948 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2021-08-23 00:15:08.174  INFO 5948 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-23 00:15:08.175  INFO 5948 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2021-08-23 00:15:08.283  INFO 5948 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-23 00:15:08.284  INFO 5948 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2671 ms
+2021-08-23 00:15:08.602  INFO 5948 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-08-23 00:15:08.825  INFO 5948 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-08-23 00:15:08.833  INFO 5948 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2021-08-23 00:15:09.485  INFO 5948 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-08-23 00:15:09.609  INFO 5948 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2021-08-23 00:15:09.667  INFO 5948 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-08-23 00:15:09.855  INFO 5948 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-08-23 00:15:10.683  INFO 5948 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-08-23 00:15:10.690  INFO 5948 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-08-23 00:15:11.447  WARN 5948 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-23 00:15:11.642  INFO 5948 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-08-23 00:15:11.847  INFO 5948 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-08-23 00:15:12.101  INFO 5948 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-23 00:15:12.497  INFO 5948 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring TestDispatcherServlet ''
+2021-08-23 00:15:12.497  INFO 5948 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2021-08-23 00:15:12.521  INFO 5948 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 23 ms
+2021-08-23 00:15:12.568  INFO 5948 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-08-23 00:15:12.597  INFO 5948 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-08-23 00:15:12.629  INFO 5948 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-08-23 00:15:12.850  INFO 5948 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 56565 (http) with context path ''
+2021-08-23 00:15:12.851  INFO 5948 --- [main] ransportManagementSystemApplicationTests : Started TransportManagementSystemApplicationTests in 7.51 seconds (JVM running for 9.398)
+2021-08-23 00:15:13.127  INFO 5948 --- [main] com.elemica.tms.aspect.ServiceAspect     : Service Method com.elemica.tms.service.impl.TariffServiceImpl.saveTariff () execution time : : 88 ms
+2021-08-23 00:15:13.127  INFO 5948 --- [main] com.elemica.tms.aspect.ControllerAspect  : Controller Method com.elemica.tms.controller.TariffController.addTariff () execution time : : 93 ms
+2021-08-23 00:15:13.178  INFO 5948 --- [main] com.elemica.tms.aspect.ServiceAspect     : Service Method com.elemica.tms.service.impl.ShipmentServiceImpl.saveShipment () execution time : : 25 ms
+2021-08-23 00:15:13.178  INFO 5948 --- [main] com.elemica.tms.aspect.ControllerAspect  : Controller Method com.elemica.tms.controller.ShipmentController.addShipment () execution time : : 29 ms
+2021-08-23 00:15:13.201  INFO 5948 --- [main] com.elemica.tms.aspect.ServiceAspect     : Service Method com.elemica.tms.service.impl.VehicleServiceImpl.getByName () execution time : : 4 ms
+2021-08-23 00:15:13.208  INFO 5948 --- [main] com.elemica.tms.aspect.ServiceAspect     : Service Method com.elemica.tms.service.impl.ShipmentServiceImpl.assignVehicleToShipment () execution time : : 26 ms
+2021-08-23 00:15:13.208  INFO 5948 --- [main] com.elemica.tms.aspect.ControllerAspect  : Controller Method com.elemica.tms.controller.ShipmentController.assignVehicleToShipment () execution time : : 26 ms
+2021-08-23 00:15:13.358  INFO 5948 --- [main] com.elemica.tms.aspect.ServiceAspect     : Service Method com.elemica.tms.service.impl.TariffServiceImpl.getByName () execution time : : 123 ms
+2021-08-23 00:15:13.366  INFO 5948 --- [main] com.elemica.tms.aspect.ServiceAspect     : Service Method com.elemica.tms.service.impl.ShipmentServiceImpl.assignTariffAndCalculateShipmentCost () execution time : : 144 ms
+2021-08-23 00:15:13.367  INFO 5948 --- [main] com.elemica.tms.aspect.ControllerAspect  : Controller Method com.elemica.tms.controller.ShipmentController.assignTariffToShipment () execution time : : 145 ms
+2021-08-23 00:15:13.379  INFO 5948 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-23 00:15:13.382  INFO 5948 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-08-23 00:15:13.382  INFO 5948 --- [main] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-08-23 00:15:13.383 ERROR 5948 --- [main] .SchemaDropperImpl$DelayedDropActionImpl : HHH000478: Unsuccessful: drop table shipment if exists
+2021-08-23 00:15:13.389 ERROR 5948 --- [main] .SchemaDropperImpl$DelayedDropActionImpl : HHH000478: Unsuccessful: drop table tariff if exists
+2021-08-23 00:15:13.392  INFO 5948 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-08-23 00:15:13.400  INFO 5948 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-08-23 00:15:13.720  INFO 5948 --- [main] ransportManagementSystemApplicationTests : Starting TransportManagementSystemApplicationTests on CI-11497 with PID 5948 (started by x000249 in C:\Assignment\TransportManagementSystem)
+2021-08-23 00:15:13.721  INFO 5948 --- [main] ransportManagementSystemApplicationTests : No active profile set, falling back to default profiles: default
+2021-08-23 00:15:14.112  INFO 5948 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-08-23 00:15:14.145  INFO 5948 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32ms. Found 3 JPA repository interfaces.
+2021-08-23 00:15:14.351  INFO 5948 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2021-08-23 00:15:14.352  INFO 5948 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-23 00:15:14.353  INFO 5948 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2021-08-23 00:15:14.362  INFO 5948 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-23 00:15:14.362  INFO 5948 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 639 ms
+2021-08-23 00:15:14.542  INFO 5948 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2021-08-23 00:15:14.546  INFO 5948 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2021-08-23 00:15:14.546  INFO 5948 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2021-08-23 00:15:14.854  INFO 5948 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-08-23 00:15:14.859  INFO 5948 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-08-23 00:15:14.918  INFO 5948 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-08-23 00:15:14.918  INFO 5948 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-08-23 00:15:15.245  WARN 5948 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-23 00:15:15.376  INFO 5948 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-08-23 00:15:15.515  INFO 5948 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-08-23 00:15:15.686  INFO 5948 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-23 00:15:16.045  INFO 5948 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring TestDispatcherServlet ''
+2021-08-23 00:15:16.046  INFO 5948 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2021-08-23 00:15:16.067  INFO 5948 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 21 ms
+2021-08-23 00:15:16.133  INFO 5948 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-08-23 00:15:16.134  INFO 5948 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-08-23 00:15:16.141  INFO 5948 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-08-23 00:15:16.234  INFO 5948 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 56571 (http) with context path ''
+2021-08-23 00:15:16.234  INFO 5948 --- [main] ransportManagementSystemApplicationTests : Started TransportManagementSystemApplicationTests in 2.538 seconds (JVM running for 12.781)
+2021-08-23 00:15:16.249  INFO 5948 --- [main] com.elemica.tms.aspect.ControllerAspect  : Controller Method com.elemica.tms.controller.StatusController.checkStatus () execution time : : 4 ms
+2021-08-23 00:15:16.256  INFO 5948 --- [main] o.s.t.c.s.DefaultTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.elemica.tms.util.ShipmentUtilsTest], using DelegatingSmartContextLoader
+2021-08-23 00:15:16.257  INFO 5948 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.elemica.tms.util.ShipmentUtilsTest]: no resource found for suffixes {-context.xml}.
+2021-08-23 00:15:16.258  INFO 5948 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.elemica.tms.util.ShipmentUtilsTest]: ShipmentUtilsTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2021-08-23 00:15:16.260  INFO 5948 --- [main] o.s.t.c.s.DefaultTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2021-08-23 00:15:16.260  INFO 5948 --- [main] o.s.t.c.s.DefaultTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@247added, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2d7fe300, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@75375bb0, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@22b8eaf0, org.springframework.test.context.support.DirtiesContextTestExecutionListener@50dfceff, org.springframework.test.context.transaction.TransactionalTestExecutionListener@26a5007, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4d4f6121, org.springframework.test.context.event.EventPublishingTestExecutionListener@2845fd12, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6c366d3, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5679e464, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@6089c1e3, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@67231d8d, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@7acb0a44]
+2021-08-23 00:15:16.403  INFO 5948 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-23 00:15:16.405  INFO 5948 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-08-23 00:15:16.405  INFO 5948 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-08-23 00:15:16.414  INFO 5948 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2021-08-23 00:15:16.417  INFO 5948 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2021-08-23 09:55:34.568  INFO 26180 --- [main] ransportManagementSystemApplicationTests : Starting TransportManagementSystemApplicationTests on CI-11497 with PID 26180 (started by x000249 in C:\Assignment\transport-management-system)
+2021-08-23 09:55:34.569  INFO 26180 --- [main] ransportManagementSystemApplicationTests : No active profile set, falling back to default profiles: default
+2021-08-23 09:55:35.463  INFO 26180 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-08-23 09:55:35.536  INFO 26180 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 65ms. Found 3 JPA repository interfaces.
+2021-08-23 09:55:36.870  INFO 26180 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2021-08-23 09:55:36.881  INFO 26180 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-23 09:55:36.881  INFO 26180 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2021-08-23 09:55:37.004  INFO 26180 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-23 09:55:37.004  INFO 26180 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2422 ms
+2021-08-23 09:55:37.334  INFO 26180 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-08-23 09:55:37.580  INFO 26180 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-08-23 09:55:37.587  INFO 26180 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2021-08-23 09:55:38.054  INFO 26180 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-08-23 09:55:38.176  INFO 26180 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2021-08-23 09:55:38.411  INFO 26180 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-08-23 09:55:38.556  INFO 26180 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-08-23 09:55:39.538  INFO 26180 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-08-23 09:55:39.547  INFO 26180 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-08-23 09:55:40.428  WARN 26180 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-23 09:55:40.676  INFO 26180 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-08-23 09:55:40.911  INFO 26180 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-08-23 09:55:41.235  INFO 26180 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-23 09:55:41.684  INFO 26180 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring TestDispatcherServlet ''
+2021-08-23 09:55:41.685  INFO 26180 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2021-08-23 09:55:41.707  INFO 26180 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 22 ms
+2021-08-23 09:55:41.759  INFO 26180 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-08-23 09:55:41.795  INFO 26180 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-08-23 09:55:41.827  INFO 26180 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-08-23 09:55:42.049  INFO 26180 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 54428 (http) with context path ''
+2021-08-23 09:55:42.052  INFO 26180 --- [main] ransportManagementSystemApplicationTests : Started TransportManagementSystemApplicationTests in 7.774 seconds (JVM running for 9.085)
+2021-08-23 09:55:42.468  INFO 26180 --- [main] com.elemica.tms.aspect.ServiceAspect     : Service Method com.elemica.tms.service.impl.TariffServiceImpl.saveTariff () execution time : : 155 ms
+2021-08-23 09:55:42.470  INFO 26180 --- [main] com.elemica.tms.aspect.ControllerAspect  : Controller Method com.elemica.tms.controller.TariffController.addTariff () execution time : : 162 ms
+2021-08-23 09:55:42.512  INFO 26180 --- [main] com.elemica.tms.aspect.ServiceAspect     : Service Method com.elemica.tms.service.impl.ShipmentServiceImpl.saveShipment () execution time : : 18 ms
+2021-08-23 09:55:42.512  INFO 26180 --- [main] com.elemica.tms.aspect.ControllerAspect  : Controller Method com.elemica.tms.controller.ShipmentController.addShipment () execution time : : 21 ms
+2021-08-23 09:55:42.537  INFO 26180 --- [main] com.elemica.tms.aspect.ServiceAspect     : Service Method com.elemica.tms.service.impl.VehicleServiceImpl.getByName () execution time : : 4 ms
+2021-08-23 09:55:42.545  INFO 26180 --- [main] com.elemica.tms.aspect.ServiceAspect     : Service Method com.elemica.tms.service.impl.ShipmentServiceImpl.assignVehicleToShipment () execution time : : 29 ms
+2021-08-23 09:55:42.546  INFO 26180 --- [main] com.elemica.tms.aspect.ControllerAspect  : Controller Method com.elemica.tms.controller.ShipmentController.assignVehicleToShipment () execution time : : 30 ms
+2021-08-23 09:55:42.775  INFO 26180 --- [main] com.elemica.tms.aspect.ServiceAspect     : Service Method com.elemica.tms.service.impl.TariffServiceImpl.getByName () execution time : : 201 ms
+2021-08-23 09:55:42.785  INFO 26180 --- [main] com.elemica.tms.aspect.ServiceAspect     : Service Method com.elemica.tms.service.impl.ShipmentServiceImpl.assignTariffAndCalculateShipmentCost () execution time : : 227 ms
+2021-08-23 09:55:42.786  INFO 26180 --- [main] com.elemica.tms.aspect.ControllerAspect  : Controller Method com.elemica.tms.controller.ShipmentController.assignTariffToShipment () execution time : : 228 ms
+2021-08-23 09:55:42.805  INFO 26180 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-23 09:55:42.808  INFO 26180 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-08-23 09:55:42.808  INFO 26180 --- [main] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-08-23 09:55:42.809 ERROR 26180 --- [main] .SchemaDropperImpl$DelayedDropActionImpl : HHH000478: Unsuccessful: drop table shipment if exists
+2021-08-23 09:55:42.813 ERROR 26180 --- [main] .SchemaDropperImpl$DelayedDropActionImpl : HHH000478: Unsuccessful: drop table tariff if exists
+2021-08-23 09:55:42.817  INFO 26180 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-08-23 09:55:42.836  INFO 26180 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-08-23 09:55:43.152  INFO 26180 --- [main] ransportManagementSystemApplicationTests : Starting TransportManagementSystemApplicationTests on CI-11497 with PID 26180 (started by x000249 in C:\Assignment\transport-management-system)
+2021-08-23 09:55:43.153  INFO 26180 --- [main] ransportManagementSystemApplicationTests : No active profile set, falling back to default profiles: default
+2021-08-23 09:55:43.519  INFO 26180 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-08-23 09:55:43.549  INFO 26180 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30ms. Found 3 JPA repository interfaces.
+2021-08-23 09:55:43.770  INFO 26180 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2021-08-23 09:55:43.771  INFO 26180 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-23 09:55:43.771  INFO 26180 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2021-08-23 09:55:43.797  INFO 26180 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-23 09:55:43.798  INFO 26180 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 643 ms
+2021-08-23 09:55:43.957  INFO 26180 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2021-08-23 09:55:43.960  INFO 26180 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2021-08-23 09:55:43.960  INFO 26180 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2021-08-23 09:55:44.240  INFO 26180 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-08-23 09:55:44.245  INFO 26180 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-08-23 09:55:44.309  INFO 26180 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-08-23 09:55:44.309  INFO 26180 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-08-23 09:55:44.668  WARN 26180 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-23 09:55:44.844  INFO 26180 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-08-23 09:55:45.059  INFO 26180 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-08-23 09:55:45.213  INFO 26180 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-23 09:55:45.478  INFO 26180 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring TestDispatcherServlet ''
+2021-08-23 09:55:45.478  INFO 26180 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2021-08-23 09:55:45.490  INFO 26180 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 12 ms
+2021-08-23 09:55:45.514  INFO 26180 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-08-23 09:55:45.514  INFO 26180 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-08-23 09:55:45.519  INFO 26180 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-08-23 09:55:45.563  INFO 26180 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 54435 (http) with context path ''
+2021-08-23 09:55:45.564  INFO 26180 --- [main] ransportManagementSystemApplicationTests : Started TransportManagementSystemApplicationTests in 2.444 seconds (JVM running for 12.597)
+2021-08-23 09:55:45.573  INFO 26180 --- [main] com.elemica.tms.aspect.ControllerAspect  : Controller Method com.elemica.tms.controller.StatusController.checkStatus () execution time : : 2 ms
+2021-08-23 09:55:45.584  INFO 26180 --- [main] o.s.t.c.s.DefaultTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.elemica.tms.util.ShipmentUtilsTest], using DelegatingSmartContextLoader
+2021-08-23 09:55:45.584  INFO 26180 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.elemica.tms.util.ShipmentUtilsTest]: no resource found for suffixes {-context.xml}.
+2021-08-23 09:55:45.585  INFO 26180 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.elemica.tms.util.ShipmentUtilsTest]: ShipmentUtilsTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2021-08-23 09:55:45.586  INFO 26180 --- [main] o.s.t.c.s.DefaultTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2021-08-23 09:55:45.586  INFO 26180 --- [main] o.s.t.c.s.DefaultTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@f6921b7, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@19cee7ed, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4e8e0052, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@5a2ce458, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1c8e1233, org.springframework.test.context.transaction.TransactionalTestExecutionListener@72117fc0, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4ca37d40, org.springframework.test.context.event.EventPublishingTestExecutionListener@71904ea8, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1d63c523, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@64f55630, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@336b6e93, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@40fd9358, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@43b41cb9]
+2021-08-23 09:55:45.752  INFO 26180 --- [main] o.s.t.c.s.DefaultTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.elemica.tms.service.ShipmentServiceTest], using DelegatingSmartContextLoader
+2021-08-23 09:55:45.752  INFO 26180 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.elemica.tms.service.ShipmentServiceTest]: no resource found for suffixes {-context.xml}.
+2021-08-23 09:55:45.752  INFO 26180 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.elemica.tms.service.ShipmentServiceTest]: ShipmentServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2021-08-23 09:55:45.753  INFO 26180 --- [main] o.s.t.c.s.DefaultTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2021-08-23 09:55:45.754  INFO 26180 --- [main] o.s.t.c.s.DefaultTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@69e3e1d9, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1ccfa4b8, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4f93816d, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@5bf86398, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2de3ac17, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4c683777, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1fa35f7e, org.springframework.test.context.event.EventPublishingTestExecutionListener@7df0bb1, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@37ec9c49, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@3ab2d64c, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@3f6f26cb, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@40123014, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@13cfe28b]
+2021-08-23 09:55:45.878 ERROR 26180 --- [main] c.e.t.service.impl.ShipmentServiceImpl   : Tariff can not be assigned to shipment as assigned vehicle to Shipment is not available for given tariff: SH-1
+2021-08-23 09:55:45.970  INFO 26180 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-23 09:55:45.972  INFO 26180 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-08-23 09:55:45.972  INFO 26180 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-08-23 09:55:45.977  INFO 26180 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2021-08-23 09:55:45.978  INFO 26180 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
