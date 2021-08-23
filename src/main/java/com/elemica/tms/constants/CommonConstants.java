@@ -2,28 +2,29 @@ package com.elemica.tms.constants;
 
 public interface CommonConstants {
 
+    String EMPTY_STRING     = "";
     String SHIPMENT_SERVICE = "ShipmentService";
     String TARIFF_SERVICE   = "TariffService";
     String VEHICLE_SERVICE  = "VehicleService";
 
-    String STATUS                  = "/status";
-    String SHIPMENT                = "/tms/shipment";
-    String VEHICLE                 = "/tms/vehicle";
-    String TARIFF                  = "/tms/tariff";
-    String DELETE                  = "/delete";
-    String ADD                     = "/add";
+    String API_PATH_STATUS         = "/status";
+    String API_PATH_SHIPMENT       = "/tms/shipment";
+    String API_PATH_VEHICLE        = "/tms/vehicle";
+    String API_PATH_TARIFF         = "/tms/tariff";
+    String API_PATH_DELETE         = "/delete";
+    String API_PATH_ADD            = "/add";
     String PATH_VEHICLE            = "/vehicle";
     String PATH_TARIFF             = "/tariff";
     String PATH_CALCULATE_SHIPMENT = "/autoCalculate";
     String PATH_EXPENSIVE_SHIPMENT = "/expensive";
 
-    String VEHICLE_NAME    = "vehicle_name";
-    String SHIPMENT_NAME   = "shipment_name";
-    String TARIFF_NAME     = "tariff_name";
-    String NAME            = "name";
-    String PATH_PARAM_NAME = "/{name}";
+    String PARAM_VEHICLE_NAME  = "vehicle_name";
+    String PARAM_SHIPMENT_NAME = "shipment_name";
+    String PARAM_TARIFF_NAME   = "tariff_name";
+    String PARAM_NAME          = "name";
+    String PATH_PARAM_NAME     = "/{name}";
 
-    String APPLICATION_STATUS_MSG                 = "Application Transport Management System Application is running.";
+    String APPLICATION_STATUS_MSG                 = "Transport Management System Application is running.";
     String CREATED_SHIPMENT                       = "Shipment is created.";
     String CREATED_VEHICLE                        = "Vehicle is created.";
     String CREATED_TARIFF                         = "Tariff is created.";
@@ -42,12 +43,8 @@ public interface CommonConstants {
     String ERROR_SHIPMENT_ASSIGN_TARIFF           = "Tariff can not be assigned to shipment as assigned vehicle to shipment is not available for given tariff.";
     String ERROR_SHIPMENT_ASSIGN_NO_TARIFF        = "No tariff available to assign for the shipment.";
     String ERROR_SHIPMENT_ASSIGN_VEHICLE          = "Given vehicle can not assign to shipment due to not enough capacity.";
-    String ERROR_SHIPMENT_ASSIGN_VEHICLE_NA       = "Given vehicle can not assign to shipment as it does not belongs to applied tariff to shipment.";
-    String ERROR_CALCULATION_SHIPMENT_TARIFF      = "Shipment calculations can not be done as no tariff assigned to shipment.";
     String ERROR_CALCULATION_TARIFF_RATE_NEGATIVE = "Calculations can not be done, Invalid tariff rate or shipment weight. Please check the shipment details.";
     String ERROR_CALCULATION_SHIPMENT_VEHICLE     = "Shipment calculations can not be done as no vehicle available with enough space with assigned tariff.";
     String ERROR_CALCULATION_SHIPMENT_COST        = "Cost can not be calculated, Please check assigned Tariff.";
-    String VEHICLE_ALREADY_AVAILABLE              = "Vehicle already available with given name.";
-
 
 }

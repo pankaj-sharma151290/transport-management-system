@@ -13,7 +13,7 @@ public interface ShipmentService {
      *
      * @return List of ShipmentDTO
      */
-    public List<ShipmentDTO> getAll();
+    List<ShipmentDTO> getAll();
 
     /**
      * This method will get the shipment object from DB based on given name.
@@ -21,21 +21,21 @@ public interface ShipmentService {
      * @param shipmentName
      * @return
      */
-    public ShipmentDTO getByName(@NonNull String shipmentName);
+    ShipmentDTO getByName(@NonNull String shipmentName);
 
     /**
      * This method will save or update the shipment object in DB.
      *
      * @param shipmentDTO
      */
-    public void saveShipment(@NonNull ShipmentDTO shipmentDTO);
+    void saveShipment(@NonNull ShipmentDTO shipmentDTO);
 
     /**
      * This method will remove the vehicle from the DB based on shipment name.
      *
      * @param shipmentName
      */
-    public void removeShipment(@NonNull String shipmentName);
+    void removeShipment(@NonNull String shipmentName);
 
     /**
      * This method will assign the vehicle to shipment,
@@ -47,7 +47,7 @@ public interface ShipmentService {
      * @param vehicleName
      * @return ShipmentDTO
      */
-    public ShipmentDTO assignVehicleToShipment(final String shipmentName, final String vehicleName);
+    ShipmentDTO assignVehicleToShipment(final String shipmentName, final String vehicleName);
 
     /**
      * This method will assign the tariff to shipment, calculate and save the shipment cost.
@@ -59,21 +59,22 @@ public interface ShipmentService {
      * @param tariffName
      * @return ShipmentDTO
      */
-    public ShipmentDTO assignTariffAndCalculateShipmentCost(final String shipmentName, final String tariffName);
+    ShipmentDTO assignTariffAndCalculateShipmentCost(final String shipmentName, final String tariffName);
 
     /**
      * This method will calculate the best(cheapest) possible shipment cost and assign the tariff and vehicle to shipment
+     *
      * @param shipmentName
      * @return ShipmentDTO
      */
-    public ShipmentDTO calculateBestShipmentCost(final String shipmentName);
+    ShipmentDTO calculateBestShipmentCost(final String shipmentName);
 
     /**
      * This method will find the most expensive shipment available in the database.
      *
      * @return ShipmentDTO
      */
-    public ShipmentDTO getMostExpensiveShipment();
+    ShipmentDTO getMostExpensiveShipment();
 
 
 }

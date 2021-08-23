@@ -23,54 +23,61 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(CommonConstants.SHIPMENT)
+@RequestMapping(CommonConstants.API_PATH_SHIPMENT)
 public class ShipmentController {
 
     @Autowired
     ShipmentService shipmentService;
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<ShipmentResponse> getAllShipments(){
+    public ResponseEntity<ShipmentResponse> getAllShipments() {
+
         return ResponseEntity.status(HttpStatus.OK).body(ShipmentUtils.prepareResponse(shipmentService.getAll()));
     }
 
     @GetMapping(value = CommonConstants.PATH_PARAM_NAME, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<ShipmentResponse> getShipmentByName(@PathVariable(CommonConstants.NAME) final String name){
+    public ResponseEntity<ShipmentResponse> getShipmentByName(@PathVariable(CommonConstants.PARAM_NAME) final String name) {
+
         return ResponseEntity.status(HttpStatus.OK).body(ShipmentUtils.prepareResponse(shipmentService.getByName(name)));
     }
 
-    @PutMapping(value = CommonConstants.ADD, consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<String> addShipment(@Valid @RequestBody ShipmentRequest shipmentRequest){
+    @PutMapping(value = CommonConstants.API_PATH_ADD, consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<String> addShipment(@Valid @RequestBody ShipmentRequest shipmentRequest) {
+
         shipmentService.saveShipment(new ShipmentDTO(shipmentRequest));
         return ResponseEntity.status(HttpStatus.CREATED).body(CommonConstants.CREATED_SHIPMENT);
     }
 
-    @PostMapping(value = CommonConstants.DELETE,produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<String> removeShipment(@RequestParam(CommonConstants.NAME) final String name){
+    @PostMapping(value = CommonConstants.API_PATH_DELETE, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<String> removeShipment(@RequestParam(CommonConstants.PARAM_NAME) final String name) {
+
         shipmentService.removeShipment(name);
         return ResponseEntity.status(HttpStatus.OK).body(CommonConstants.DELETED_SHIPMENT);
     }
 
     @PostMapping(value = CommonConstants.PATH_VEHICLE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<ShipmentResponse> assignVehicleToShipment(@RequestParam(CommonConstants.SHIPMENT_NAME) final String shipmentName,
-                                                                    @RequestParam(CommonConstants.VEHICLE_NAME) final String vehicleName){
+    public ResponseEntity<ShipmentResponse> assignVehicleToShipment(@RequestParam(CommonConstants.PARAM_SHIPMENT_NAME) final String shipmentName,
+                                                                    @RequestParam(CommonConstants.PARAM_VEHICLE_NAME) final String vehicleName) {
 
-        return ResponseEntity.status(HttpStatus.OK).body(ShipmentUtils.prepareResponse(shipmentService.assignVehicleToShipment(shipmentName,vehicleName)));
+        return ResponseEntity.status(HttpStatus.OK).body(ShipmentUtils.prepareResponse(shipmentService.assignVehicleToShipment(shipmentName, vehicleName)));
     }
 
     @PostMapping(value = CommonConstants.PATH_TARIFF, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<ShipmentResponse> assignTariffToShipment(@RequestParam(CommonConstants.SHIPMENT_NAME) final String shipmentName,
-                                                                   @RequestParam(CommonConstants.TARIFF_NAME) final String tariffName){
+    public ResponseEntity<ShipmentResponse> assignTariffToShipment(@RequestParam(CommonConstants.PARAM_SHIPMENT_NAME) final String shipmentName,
+                                                                   @RequestParam(CommonConstants.PARAM_TARIFF_NAME) final String tariffName) {
+
         return ResponseEntity.status(HttpStatus.OK).body(ShipmentUtils.prepareResponse(shipmentService.assignTariffAndCalculateShipmentCost(shipmentName, tariffName)));
     }
 
     @PostMapping(value = CommonConstants.PATH_CALCULATE_SHIPMENT, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<ShipmentResponse> assignVehicleTariffWithCheapestCost(@RequestParam(CommonConstants.SHIPMENT_NAME) final String shipmentName){
+    public ResponseEntity<ShipmentResponse> assignVehicleTariffWithCheapestCost(@RequestParam(CommonConstants.PARAM_SHIPMENT_NAME) final String shipmentName) {
+
         return ResponseEntity.status(HttpStatus.OK).body(ShipmentUtils.prepareResponse(shipmentService.calculateBestShipmentCost(shipmentName)));
     }
 
     @GetMapping(value = CommonConstants.PATH_EXPENSIVE_SHIPMENT, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<ShipmentResponse> getMostExpensiveShipment(){
+    public ResponseEntity<ShipmentResponse> getMostExpensiveShipment() {
+
         return ResponseEntity.status(HttpStatus.OK).body(ShipmentUtils.prepareResponse(shipmentService.getMostExpensiveShipment()));
     }
 

@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(path = CommonConstants.TARIFF, produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(path = CommonConstants.API_PATH_TARIFF, produces = MediaType.APPLICATION_JSON_VALUE)
 public class TariffController {
 
     @Autowired
@@ -36,22 +36,22 @@ public class TariffController {
     }
 
     @GetMapping(path = CommonConstants.PATH_PARAM_NAME)
-    public ResponseEntity<TariffResponse> getTariffByName(@PathVariable(CommonConstants.NAME) final String name) {
+    public ResponseEntity<TariffResponse> getTariffByName(@PathVariable(CommonConstants.PARAM_NAME) final String name) {
 
         return ResponseEntity.status(HttpStatus.OK).body(TariffUtils.prepareResponse(tariffService.getByName(name)));
     }
 
-    @PutMapping(path = CommonConstants.ADD, consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PutMapping(path = CommonConstants.API_PATH_ADD, consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<String> addTariff(@Valid @RequestBody TariffRO tariffRO) {
 
         tariffService.saveTariff(new TariffDTO(tariffRO));
-        return ResponseEntity.status(HttpStatus.CREATED).body("Tariff created");
+        return ResponseEntity.status(HttpStatus.CREATED).body(CommonConstants.CREATED_TARIFF);
     }
 
-    @PostMapping(path = CommonConstants.DELETE)
-    public ResponseEntity<String> removeTariff(@RequestParam(CommonConstants.NAME) final String name) {
+    @PostMapping(path = CommonConstants.API_PATH_DELETE)
+    public ResponseEntity<String> removeTariff(@RequestParam(CommonConstants.PARAM_NAME) final String name) {
 
         tariffService.removeTariff(name);
-        return ResponseEntity.status(HttpStatus.OK).body("Tariff deleted");
+        return ResponseEntity.status(HttpStatus.OK).body(CommonConstants.DELETED_TARIFF);
     }
 }

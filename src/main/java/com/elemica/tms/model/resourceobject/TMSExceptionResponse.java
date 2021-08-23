@@ -7,9 +7,10 @@ import lombok.NoArgsConstructor;
 
 @AllArgsConstructor
 @NoArgsConstructor
-public @Data class TMSExceptionResponse {
+public @Data
+class TMSExceptionResponse {
 
-    private int httpCode;
+    private int    httpCode;
     private String httpStatus;
     private String message;
 }

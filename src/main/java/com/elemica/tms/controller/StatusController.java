@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class StatusController {
 
-    @GetMapping(CommonConstants.STATUS)
+    @GetMapping(CommonConstants.API_PATH_STATUS)
     public ResponseEntity<String> checkStatus() {
 
         return ResponseEntity.status(HttpStatus.OK).body(CommonConstants.APPLICATION_STATUS_MSG);

@@ -18,6 +18,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
+import static com.elemica.tms.constants.CommonConstants.EMPTY_STRING;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 import static org.mockito.Mockito.verify;
@@ -31,8 +32,6 @@ public class ShipmentControllerTest {
 
     @Mock
     ShipmentServiceImpl shipmentService;
-
-    private static final String EMPTY_STRING = "";
 
     @Test
     @DisplayName(value = "Test Get all shipments controller")

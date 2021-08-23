@@ -1,6 +1,5 @@
 package com.elemica.tms.controller;
 
-import javax.validation.ConstraintViolationException;
 import javax.validation.Valid;
 
 import com.elemica.tms.constants.CommonConstants;
@@ -26,7 +25,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(value = CommonConstants.VEHICLE, produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(value = CommonConstants.API_PATH_VEHICLE, produces = MediaType.APPLICATION_JSON_VALUE)
 public class VehicleController {
 
     @Autowired
@@ -34,25 +33,29 @@ public class VehicleController {
 
     @GetMapping()
     public ResponseEntity<VehicleResponse> getAllVehicles() {
+
         return ResponseEntity.status(HttpStatus.OK).body(VehicleUtils.prepareResponse(vehicleService.getAll()));
     }
 
     @GetMapping(path = CommonConstants.PATH_PARAM_NAME)
-    public ResponseEntity<VehicleResponse> getVehicleByName(@PathVariable(CommonConstants.NAME) final String name) {
+    public ResponseEntity<VehicleResponse> getVehicleByName(@PathVariable(CommonConstants.PARAM_NAME) final String name) {
+
         return ResponseEntity.status(HttpStatus.OK).body(VehicleUtils.prepareResponse(vehicleService.getByName(name)));
     }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
-    @PutMapping(path = CommonConstants.ADD, consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PutMapping(path = CommonConstants.API_PATH_ADD, consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<String> addVehicle(@Valid @RequestBody VehicleRO vehicleRO) {
+
         vehicleService.saveVehicle(new VehicleDTO(vehicleRO));
-        return ResponseEntity.status(HttpStatus.CREATED).body("Vehicle created");
+        return ResponseEntity.status(HttpStatus.CREATED).body(CommonConstants.CREATED_VEHICLE);
     }
 
-    @PostMapping(path = CommonConstants.DELETE)
-    public ResponseEntity<String> removeVehicle(@RequestParam(CommonConstants.NAME) final String name) {
+    @PostMapping(path = CommonConstants.API_PATH_DELETE)
+    public ResponseEntity<String> removeVehicle(@RequestParam(CommonConstants.PARAM_NAME) final String name) {
+
         vehicleService.removeVehicle(name);
-        return ResponseEntity.status(HttpStatus.OK).body("Vehicle deleted");
+        return ResponseEntity.status(HttpStatus.OK).body(CommonConstants.DELETED_VEHICLE);
     }
 
 }

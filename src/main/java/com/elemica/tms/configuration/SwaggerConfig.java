@@ -23,10 +23,11 @@ public class SwaggerConfig {
     /**
      * Swagger documentation for all the API in given package
      *
-     * @return
+     * @return Docket
      */
     @Bean
     public Docket api() {
+
         return new Docket(DocumentationType.SWAGGER_2).apiInfo(apiInfo).select()
                                                       .apis(RequestHandlerSelectors.basePackage("com.elemica.tms")).paths(PathSelectors.any()).build();
     }

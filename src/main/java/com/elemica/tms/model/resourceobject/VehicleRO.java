@@ -2,7 +2,6 @@ package com.elemica.tms.model.resourceobject;
 
 import java.math.BigDecimal;
 
-import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Positive;
@@ -29,8 +28,9 @@ class VehicleRO {
     @Positive(message = "Vehicle Weight must be Positive.")
     private BigDecimal capacity;
 
-    public VehicleRO(@NonNull VehicleDTO vehicleDTO){
-        this.name=vehicleDTO.getName();
-        this.capacity=vehicleDTO.getCapacity();
+    public VehicleRO(@NonNull VehicleDTO vehicleDTO) {
+
+        this.name = vehicleDTO.getName();
+        this.capacity = vehicleDTO.getCapacity();
     }
 }

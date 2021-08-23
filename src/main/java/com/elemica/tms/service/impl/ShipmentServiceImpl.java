@@ -2,6 +2,7 @@ package com.elemica.tms.service.impl;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -135,15 +136,12 @@ public class ShipmentServiceImpl implements ShipmentService {
 
         ShipmentDTO shipmentDTO = this.getByName(shipmentName);
         Optional<TariffDTO> cheapestTariffOptional = tariffService.getAll().stream()
-                                                                  .sorted((T1, T2) -> calculateCostAfterDiscountPercentage(T1.getRate(), T1.getDiscount()).compareTo(
-                                                                          calculateCostAfterDiscountPercentage(T2.getRate(), T2.getDiscount())))
+                                                                  .sorted(Comparator.comparing(t -> calculateCostAfterDiscountPercentage(t.getRate(), t.getDiscount())))
                                                                   .filter(
                                                                           tariffDTO -> tariffDTO.getApplicableVehicles()
                                                                                                 .stream()
-                                                                                                .filter(vehicleDTO -> vehicleDTO.getCapacity()
-                                                                                                                                .compareTo(shipmentDTO.getWeight()) >= 0)
-                                                                                                .findAny()
-                                                                                                .isPresent()
+                                                                                                .anyMatch(vehicleDTO -> vehicleDTO.getCapacity()
+                                                                                                                                  .compareTo(shipmentDTO.getWeight()) >= 0)
                                                                          )
                                                                   .findFirst();
         if(cheapestTariffOptional.isPresent()) {
@@ -196,7 +194,7 @@ public class ShipmentServiceImpl implements ShipmentService {
             }
         } else {
             VehicleDTO vehicleDTO = shipmentDTO.getVehicle();
-            if(tariffDTO.getApplicableVehicles().stream().filter(applicableVehicle -> vehicleDTO.getName().equals(applicableVehicle.getName())).findAny().isPresent()) {
+            if(tariffDTO.getApplicableVehicles().stream().anyMatch(applicableVehicle -> vehicleDTO.getName().equals(applicableVehicle.getName()))) {
                 shipmentDTO.setTariff(tariffDTO);
             } else {
                 logger.error("Tariff can not be assigned to shipment as assigned vehicle to Shipment is not available for given tariff: {}", shipmentDTO.getName());
@@ -213,36 +211,30 @@ public class ShipmentServiceImpl implements ShipmentService {
      */
     private BigDecimal calculateShipmentCost(ShipmentDTO shipmentDTO) {
 
-        BigDecimal cost      = BigDecimal.ZERO;
-        TariffDTO  tariffDTO = shipmentDTO.getTariff();
-        if(Objects.nonNull(tariffDTO)) {
-
-            BigDecimal tariffRate     = tariffDTO.getRate();
-            BigDecimal shipmentWeight = shipmentDTO.getWeight();
-            if(tariffRate.signum() >= 0 && shipmentWeight.signum() > 0) {
-                cost = tariffDTO.getRate().multiply(shipmentDTO.getWeight());
-                BigDecimal discountPercentage = tariffDTO.getDiscount();
-                if(cost.signum() > 0 && discountPercentage.signum() > 0) {
-                    cost = calculateCostAfterDiscountPercentage(cost, discountPercentage);
-                }
-                if(cost.signum() >= 0) {
-                    return cost;
-                } else {
-                    logger.error("Shipment cost can not be negative, Please check: {}", shipmentDTO.getName());
-                    throw new TMSException(CommonConstants.ERROR_CALCULATION_SHIPMENT_COST);
-                }
+        BigDecimal cost;
+        TariffDTO  tariffDTO      = shipmentDTO.getTariff();
+        BigDecimal tariffRate     = tariffDTO.getRate();
+        BigDecimal shipmentWeight = shipmentDTO.getWeight();
+        if(tariffRate.signum() >= 0 && shipmentWeight.signum() > 0) {
+            cost = tariffDTO.getRate().multiply(shipmentDTO.getWeight());
+            BigDecimal discountPercentage = tariffDTO.getDiscount();
+            if(cost.signum() > 0 && discountPercentage.signum() > 0) {
+                cost = calculateCostAfterDiscountPercentage(cost, discountPercentage);
+            }
+            if(cost.signum() >= 0) {
+                return cost;
             } else {
-                logger.error("Calculations can not be done, Invalid tariff rate or shipment weight. Please check the shipment details: {}", shipmentDTO.getName());
-                throw new TMSException(CommonConstants.ERROR_CALCULATION_TARIFF_RATE_NEGATIVE);
+                logger.error("Shipment cost can not be negative, Please check: {}", shipmentDTO.getName());
+                throw new TMSException(CommonConstants.ERROR_CALCULATION_SHIPMENT_COST);
             }
         } else {
-            logger.error("Shipment calculations can not be done as no tariff assigned to shipment : {}", shipmentDTO.getName());
-            throw new TMSException(CommonConstants.ERROR_CALCULATION_SHIPMENT_TARIFF);
+            logger.error("Calculations can not be done, Invalid tariff rate or shipment weight. Please check the shipment details: {}", shipmentDTO.getName());
+            throw new TMSException(CommonConstants.ERROR_CALCULATION_TARIFF_RATE_NEGATIVE);
         }
     }
 
     /**
-     * This method will calculate the cost after applying the dicount
+     * This method will calculate the cost after applying the discount
      *
      * @param cost
      * @param discountPercentage

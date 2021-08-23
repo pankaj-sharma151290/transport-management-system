@@ -15,7 +15,7 @@ public interface TariffService {
      *
      * @return List of TariffDTO
      */
-    public List<TariffDTO> getAll();
+    List<TariffDTO> getAll();
 
     /**
      *This method will get the Tariff object from DB based on given name.
@@ -23,28 +23,28 @@ public interface TariffService {
      * @param tariffName
      * @return TariffDTO
      */
-    public TariffDTO getByName(@NonNull String tariffName);
+    TariffDTO getByName(@NonNull String tariffName);
 
     /**
      * This method will save or update the tariff object in DB.
      *
      * @param tariffDTO
      */
-    public void saveTariff(@NonNull TariffDTO tariffDTO);
+    void saveTariff(@NonNull TariffDTO tariffDTO);
 
     /**
      * This method will remove the tariff from the DB based on tariff name.
      *
      * @param tariffName
      */
-    public void removeTariff(@NonNull String tariffName);
+    void removeTariff(@NonNull String tariffName);
 
     /**
-     * This method will get the tariff's applicable vehicle with minimum capacity that fulfils the required capacity
+     * This method will get the tariff's applicable vehicle with minimum capacity that fulfils the required capacity.
      *
      * @param tariffDTO
      * @param requiredCapacity
      * @return VehicleDTO
      */
-    public VehicleDTO getApplicableVehicleWithMinimumCapacity(@NonNull TariffDTO tariffDTO, @NonNull BigDecimal requiredCapacity);
+    VehicleDTO getApplicableVehicleWithMinimumCapacity(@NonNull TariffDTO tariffDTO, @NonNull BigDecimal requiredCapacity);
 }

@@ -43,7 +43,7 @@ class TransportManagementSystemApplicationTests {
     @DisplayName(value = "Application Status Test")
     void checkLoginStatus() throws Exception {
 
-        MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.get(CommonConstants.STATUS).accept(MediaType.TEXT_HTML_VALUE))
+        MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.get(CommonConstants.API_PATH_STATUS).accept(MediaType.TEXT_HTML_VALUE))
                                      .andExpect(status().isOk()).andReturn();
         assertEquals(CommonConstants.APPLICATION_STATUS_MSG, mvcResult.getResponse().getContentAsString());
     }
@@ -70,31 +70,30 @@ class TransportManagementSystemApplicationTests {
         shipmentRO.setWeight(new BigDecimal(75));
 
         ResultActions addTariffResult = mockMvc
-                .perform(MockMvcRequestBuilders.put(CommonConstants.TARIFF + CommonConstants.ADD).content(asJsonString(tariffRO1))
+                .perform(MockMvcRequestBuilders.put(CommonConstants.API_PATH_TARIFF + CommonConstants.API_PATH_ADD).content(asJsonString(tariffRO1))
                                                .contentType(MediaType.APPLICATION_JSON)
                                                .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isCreated());
-        ;
 
         ResultActions addShipmentResult = mockMvc
-                .perform(MockMvcRequestBuilders.put(CommonConstants.SHIPMENT + CommonConstants.ADD).content(asJsonString(shipmentRO))
+                .perform(MockMvcRequestBuilders.put(CommonConstants.API_PATH_SHIPMENT + CommonConstants.API_PATH_ADD).content(asJsonString(shipmentRO))
                                                .contentType(MediaType.APPLICATION_JSON)
                                                .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isCreated());
 
 
         ResultActions assignVehicleToShipmentResult = mockMvc
-                .perform(MockMvcRequestBuilders.post(CommonConstants.SHIPMENT + CommonConstants.PATH_VEHICLE)
-                                               .queryParam(CommonConstants.SHIPMENT_NAME, shipmentRO.getName())
-                                               .queryParam(CommonConstants.VEHICLE_NAME, vehicleRO1.getName())
+                .perform(MockMvcRequestBuilders.post(CommonConstants.API_PATH_SHIPMENT + CommonConstants.PATH_VEHICLE)
+                                               .queryParam(CommonConstants.PARAM_SHIPMENT_NAME, shipmentRO.getName())
+                                               .queryParam(CommonConstants.PARAM_VEHICLE_NAME, vehicleRO1.getName())
                                                .contentType(MediaType.APPLICATION_JSON)
                                                .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk());
 
         MvcResult assignTariffToShipmentResult = mockMvc
-                .perform(MockMvcRequestBuilders.post(CommonConstants.SHIPMENT + CommonConstants.PATH_TARIFF)
-                                               .queryParam(CommonConstants.SHIPMENT_NAME, shipmentRO.getName())
-                                               .queryParam(CommonConstants.TARIFF_NAME, tariffRO1.getName())
+                .perform(MockMvcRequestBuilders.post(CommonConstants.API_PATH_SHIPMENT + CommonConstants.PATH_TARIFF)
+                                               .queryParam(CommonConstants.PARAM_SHIPMENT_NAME, shipmentRO.getName())
+                                               .queryParam(CommonConstants.PARAM_TARIFF_NAME, tariffRO1.getName())
                                                .contentType(MediaType.APPLICATION_JSON)
                                                .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
@@ -105,7 +104,7 @@ class TransportManagementSystemApplicationTests {
         assertThat(shipmentResponse.getShipments().size(), is(1));
         assertThat(shipmentResponse.getShipments().get(0).getName(), is(shipmentRO.getName()));
         assertThat(shipmentResponse.getShipments().get(0).getWeight(), Matchers.comparesEqualTo(shipmentRO.getWeight()));
-        assertThat(shipmentResponse.getShipments().get(0).getCost(), Matchers.comparesEqualTo(new BigDecimal(712.50)));
+        assertThat(shipmentResponse.getShipments().get(0).getCost(), Matchers.comparesEqualTo(new BigDecimal("712.50")));
         assertThat(shipmentResponse.getShipments().get(0).getTariff().getName(), is(tariffRO1.getName()));
         assertThat(shipmentResponse.getShipments().get(0).getVehicle().getName(), is(vehicleRO1.getName()));
     }

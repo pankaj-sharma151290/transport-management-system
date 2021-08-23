@@ -14,6 +14,7 @@ import lombok.experimental.UtilityClass;
 public class ShipmentUtils {
 
     public ShipmentResponse prepareResponse(@NonNull List<ShipmentDTO> shipmentDTOList) {
+
         List<ShipmentRO> shipmentROList = new ArrayList<>(shipmentDTOList.size());
         shipmentDTOList.forEach(shipmentDTO -> shipmentROList.add(new ShipmentRO(shipmentDTO)));
         return new ShipmentResponse(shipmentROList, shipmentROList.size());

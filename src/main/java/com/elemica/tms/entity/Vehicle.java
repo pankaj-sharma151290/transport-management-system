@@ -6,7 +6,6 @@ import java.time.LocalDateTime;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.validation.constraints.Min;
 import javax.validation.constraints.Positive;
 
 import org.hibernate.annotations.CreationTimestamp;

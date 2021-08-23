@@ -9,8 +9,9 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 public class TransportManagementSystemApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(TransportManagementSystemApplication.class, args);
-	}
+    public static void main(String[] args) {
+
+        SpringApplication.run(TransportManagementSystemApplication.class, args);
+    }
 
 }

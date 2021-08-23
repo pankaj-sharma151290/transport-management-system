@@ -48,7 +48,7 @@ public class VehicleServiceImpl implements VehicleService {
 
         Optional<Vehicle> vehicle = vehicleRepository.findById(vehicleName);
         if(vehicle.isPresent()) {
-            return  mapper.convertToDTO(vehicle.get());
+            return mapper.convertToDTO(vehicle.get());
         } else {
             logger.error("No Vehicle object found with given name : {}", vehicleName);
             throw new TMSException(CommonConstants.ERROR_VEHICLE_NOT_FOUND);
@@ -74,8 +74,7 @@ public class VehicleServiceImpl implements VehicleService {
 
         try {
             vehicleRepository.deleteById(vehicleName);
-        }
-        catch(DataIntegrityViolationException e) {
+        } catch(DataIntegrityViolationException e) {
             logger.error("Vehicle can not be de deleted since it is assigned to one of tariffs : {}", e);
             throw new TMSException(CommonConstants.ERROR_VEHICLE_IN_USE);
         } catch(EmptyResultDataAccessException e) {

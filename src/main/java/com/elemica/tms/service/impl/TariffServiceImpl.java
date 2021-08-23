@@ -2,6 +2,7 @@ package com.elemica.tms.service.impl;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 
@@ -34,7 +35,7 @@ public class TariffServiceImpl implements TariffService {
     @Autowired
     private TariffRepository tariffRepository;
 
-    private EntityMapper<Tariff, TariffDTO> mapper = new EntityMapper<Tariff, TariffDTO>(
+    private EntityMapper<Tariff, TariffDTO> mapper = new EntityMapper<>(
             Tariff.class, TariffDTO.class);
 
     @Override
@@ -92,7 +93,7 @@ public class TariffServiceImpl implements TariffService {
     public VehicleDTO getApplicableVehicleWithMinimumCapacity(@NonNull final TariffDTO tariffDTO, @NonNull final BigDecimal requiredCapacity) {
 
         return tariffDTO.getApplicableVehicles().stream()
-                        .sorted((v1,v2)-> v1.getCapacity().compareTo(v2.getCapacity()))
+                        .sorted(Comparator.comparing(VehicleDTO::getCapacity))
                         .filter(applicableVehicle -> applicableVehicle.getCapacity().compareTo(requiredCapacity) > 0)
                         .findFirst().orElse(null);
     }

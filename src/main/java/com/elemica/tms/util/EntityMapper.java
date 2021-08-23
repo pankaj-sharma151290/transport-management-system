@@ -1,6 +1,5 @@
 package com.elemica.tms.util;
 
-
 import org.modelmapper.ModelMapper;
 
 public class EntityMapper<T extends Object, G extends Object> {
