@@ -12,7 +12,6 @@ import com.elemica.tms.repository.VehicleRepository;
 import com.elemica.tms.service.contract.VehicleService;
 import com.elemica.tms.util.EntityMapper;
 
-import org.hibernate.exception.ConstraintViolationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
