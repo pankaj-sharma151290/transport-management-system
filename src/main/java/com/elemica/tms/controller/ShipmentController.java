@@ -4,7 +4,7 @@ import javax.validation.Valid;
 
 import com.elemica.tms.constants.CommonConstants;
 import com.elemica.tms.model.dto.ShipmentDTO;
-import com.elemica.tms.model.resourceobject.ShipmentRO;
+import com.elemica.tms.model.resourceobject.ShipmentRequest;
 import com.elemica.tms.model.resourceobject.ShipmentResponse;
 import com.elemica.tms.service.contract.ShipmentService;
 import com.elemica.tms.util.ShipmentUtils;
@@ -40,8 +40,8 @@ public class ShipmentController {
     }
 
     @PutMapping(value = CommonConstants.ADD, consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<String> addShipment(@Valid @RequestBody ShipmentRO shipmentRO){
-        shipmentService.saveShipment(new ShipmentDTO(shipmentRO));
+    public ResponseEntity<String> addShipment(@Valid @RequestBody ShipmentRequest shipmentRequest){
+        shipmentService.saveShipment(new ShipmentDTO(shipmentRequest));
         return ResponseEntity.status(HttpStatus.CREATED).body(CommonConstants.CREATED_SHIPMENT);
     }
 

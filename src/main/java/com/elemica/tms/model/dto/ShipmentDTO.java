@@ -2,9 +2,8 @@ package com.elemica.tms.model.dto;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-import java.util.Objects;
 
-import com.elemica.tms.model.resourceobject.ShipmentRO;
+import com.elemica.tms.model.resourceobject.ShipmentRequest;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -13,8 +12,8 @@ import lombok.NoArgsConstructor;
 import lombok.NonNull;
 
 @Builder
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 public @Data
 class ShipmentDTO {
 
@@ -32,17 +31,10 @@ class ShipmentDTO {
 
     private LocalDateTime updateDate;
 
-    public ShipmentDTO(@NonNull ShipmentRO shipmentRO) {
+    public ShipmentDTO(@NonNull ShipmentRequest shipmentRequest) {
 
-        this.name = shipmentRO.getName();
-        this.weight = shipmentRO.getWeight();
-        this.cost = shipmentRO.getCost();
-        if(Objects.nonNull(shipmentRO.getVehicle())) {
-            this.vehicle = new VehicleDTO(shipmentRO.getVehicle());
-        }
-        if(Objects.nonNull(shipmentRO.getTariff())) {
-            this.tariff = new TariffDTO(shipmentRO.getTariff());
-        }
+        this.name = shipmentRequest.getName();
+        this.weight = shipmentRequest.getWeight();
     }
 
 }

@@ -4,9 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.elemica.tms.constants.CommonConstants;
-import com.elemica.tms.controller.ShipmentController;
 import com.elemica.tms.model.dto.ShipmentDTO;
-import com.elemica.tms.model.resourceobject.ShipmentRO;
+import com.elemica.tms.model.resourceobject.ShipmentRequest;
 import com.elemica.tms.model.resourceobject.ShipmentResponse;
 import com.elemica.tms.service.impl.ShipmentServiceImpl;
 
@@ -33,7 +32,7 @@ public class ShipmentControllerTest {
     @Mock
     ShipmentServiceImpl shipmentService;
 
-    private static final String EMPTY_STRING="";
+    private static final String EMPTY_STRING = "";
 
     @Test
     @DisplayName(value = "Test Get all shipments controller")
@@ -65,8 +64,8 @@ public class ShipmentControllerTest {
     @DisplayName(value = "Test add shipment controller")
     public void TestAddShipment() {
 
-        ShipmentRO             shipmentRO     = new ShipmentRO();
-        ResponseEntity<String> responseEntity = shipmentController.addShipment(shipmentRO);
+        ShipmentRequest        shipmentRequest = new ShipmentRequest();
+        ResponseEntity<String> responseEntity  = shipmentController.addShipment(shipmentRequest);
         verify(shipmentService).saveShipment(new ShipmentDTO());
         assertThat(responseEntity.getStatusCode(), is(HttpStatus.CREATED));
         assertThat(responseEntity.getBody(), is(CommonConstants.CREATED_SHIPMENT));
