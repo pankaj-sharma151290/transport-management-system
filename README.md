@@ -38,6 +38,13 @@ mvn clean package
 docker build --no-cache -t transport-management-system:1.0.0 .
 
 docker run --name tms -p 8081:8081 -e "SERVICE_PORT=8081" transport-management-system:1.0.0
+
+->To Check Logs:
+
+docker ps 
+docker exec -it <docker-container-id> /bin/sh
+cd log
+
 ```
 
 ## Access application and database
