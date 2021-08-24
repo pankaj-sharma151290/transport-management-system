@@ -75,7 +75,7 @@ public class VehicleServiceImpl implements VehicleService {
         try {
             vehicleRepository.deleteById(vehicleName);
         } catch(DataIntegrityViolationException e) {
-            logger.error("Vehicle can not be de deleted since it is assigned to one of tariffs : {}", e);
+            logger.error("Vehicle can not be de deleted since it is assigned to one of tariffs or shipments: {}", e);
             throw new TMSException(CommonConstants.ERROR_VEHICLE_IN_USE);
         } catch(EmptyResultDataAccessException e) {
             logger.error("No Vehicle object found with given name : {}, {}", vehicleName, e);

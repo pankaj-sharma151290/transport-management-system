@@ -36,12 +36,12 @@ public interface CommonConstants {
     String ERROR_CREATE_OBJECT_VALIDATION         = "Object can not be created Validation failed, Please check the input.";
     String ERROR_TARIFF_NOT_FOUND                 = "No tariff found with given name.";
     String ERROR_VEHICLE_NOT_FOUND                = "No vehicle found with given name.";
-    String ERROR_VEHICLE_IN_USE                   = "Given vehicle can not be de deleted since it is assigned in one of tariffs.";
+    String ERROR_VEHICLE_IN_USE                   = "Given vehicle can not be de deleted since it is assigned in one of tariffs or shipments.";
     String ERROR_TARIFF_IN_USE                    = "Given tariff can not be de deleted since it is assigned to active shipment.";
     String ERROR_SHIPMENT_NOT_FOUND               = "No shipment found with given name.";
     String ERROR_MAX_SHIPMENT_NOT_FOUND           = "There is no shipment found with shipment cost.";
     String ERROR_SHIPMENT_ASSIGN_TARIFF           = "Tariff can not be assigned to shipment as assigned vehicle to shipment is not available for given tariff.";
-    String ERROR_SHIPMENT_ASSIGN_NO_TARIFF        = "No tariff available to assign for the shipment.";
+    String ERROR_SHIPMENT_ASSIGN_NO_TARIFF        = "No tariff available with enough vehicle capacity to assign for the shipment.";
     String ERROR_SHIPMENT_ASSIGN_VEHICLE          = "Given vehicle can not assign to shipment due to not enough capacity.";
     String ERROR_CALCULATION_TARIFF_RATE_NEGATIVE = "Calculations can not be done, Invalid tariff rate or shipment weight. Please check the shipment details.";
     String ERROR_CALCULATION_SHIPMENT_VEHICLE     = "Shipment calculations can not be done as no vehicle available with enough space with assigned tariff.";

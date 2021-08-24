@@ -94,7 +94,7 @@ public class TariffServiceImpl implements TariffService {
 
         return tariffDTO.getApplicableVehicles().stream()
                         .sorted(Comparator.comparing(VehicleDTO::getCapacity))
-                        .filter(applicableVehicle -> applicableVehicle.getCapacity().compareTo(requiredCapacity) > 0)
+                        .filter(applicableVehicle -> applicableVehicle.getCapacity().compareTo(requiredCapacity) >= 0)
                         .findFirst().orElse(null);
     }
 }
